@@ -16,7 +16,7 @@ env = DefaultEnvironment()
 board = env.BoardConfig()
 build_core = board.get("build.core", "").lower()
 
-SConscript("embed.py", exports="env")
+SConscript("_embed_ex.py", exports="env")
 
 if build_core == "mbcwb":
     SConscript(
