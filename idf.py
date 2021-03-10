@@ -26,7 +26,7 @@ from platformio.util import get_systype
 from platformio.builder.tools.piolib import ProjectAsLibBuilder
 
 env = DefaultEnvironment()
-env.SConscript("_embed_files.py", exports="env")
+env.SConscript("embed.py", exports="env")
 
 platform = env.PioPlatform()
 board = env.BoardConfig()
