@@ -1,14 +1,3 @@
-"""Pumbaa
-
-Pumbaa is Python on top of Simba.
-
-The implementation is a port of MicroPython, designed for embedded
-devices with limited amount of RAM and code memory.
-
-http://pumbaa.readthedocs.org
-
-"""
-
 from os.path import join, sep
 
 from SCons.Script import DefaultEnvironment, SConscript
@@ -39,7 +28,7 @@ env.AddMethod(LookupSources)
 env.AddMethod(VariantDirWrap)
 
 env.Replace(
-    PLATFORMFW_DIR=env.PioPlatform().get_package_dir("framework-pumbaa"),
+    PLATFORMFW_DIR=env.PioPlatform().get_package_dir("E52B"),
     UPLOADERFLAGS=[]  # Backward compatibility for obsolete build script
 )
 

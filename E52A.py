@@ -1,11 +1,3 @@
-"""
-Espressif IDF
-
-Espressif IoT Development Framework for ESP32 MCU
-
-https://github.com/espressif/esp-idf
-"""
-
 import copy
 import json
 import subprocess
@@ -26,7 +18,7 @@ from platformio.util import get_systype
 from platformio.builder.tools.piolib import ProjectAsLibBuilder
 
 env = DefaultEnvironment()
-env.SConscript("_embed_ex.py", exports="env")
+env.SConscript("_common.py", exports="env")
 
 platform = env.PioPlatform()
 board = env.BoardConfig()

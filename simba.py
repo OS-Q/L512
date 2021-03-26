@@ -1,11 +1,3 @@
-"""Simba
-
-Simba is an RTOS and build framework. It aims to make embedded
-programming easy and portable.
-
-http://simba-os.readthedocs.org
-
-"""
 
 from os.path import join, sep
 
@@ -37,7 +29,7 @@ env.AddMethod(LookupSources)
 env.AddMethod(VariantDirWrap)
 
 env.Replace(
-    PLATFORMFW_DIR=env.PioPlatform().get_package_dir("framework-simba"),
+    PLATFORMFW_DIR=env.PioPlatform().get_package_dir("simba"),
     UPLOADERFLAGS=[]  # Backward compatibility for obsolete build script
 )
 
